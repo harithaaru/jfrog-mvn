@@ -16,6 +16,15 @@
 plugins {
     id("com.jfrog.artifactory") version "5.+"
 }
+buildscript{
+repositories {
+        maven {
+            url "http://localhost:8080/home"
+            allowInsecureProtocol=true
+        }
+    }
+
+}
 
 allprojects {
     repositories {
